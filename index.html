@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sportacus Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1>Sportacus</h1>
+
+        <!-- =========== PANTALLA 1: SELECCIÓN DE ROL =========== -->
+        <section id="role-selection-section" class="card">
+            <h2>Bienvenido</h2>
+            <p>Por favor, selecciona tu rol:</p>
+            <div class="role-buttons">
+                <button id="btn-role-alumno">Soy Alumno</button>
+                <button id="btn-role-admin">Soy Administrador</button>
+            </div>
+        </section>
+
+        <!-- =========== PANTALLA 2: LOGIN (oculta al inicio) =========== -->
+        <section id="login-form-section" class="card hidden">
+            <h2 id="login-title">Iniciar Sesión</h2> 
+            <div class="login-form">
+                <input type="text" id="username-input" placeholder="Nombre de Usuario">
+                <input type="password" id="password-input" placeholder="Contraseña">
+                <button id="login-button">Ingresar</button>
+                <button id="back-to-role-button" class="back-button">Volver</button>
+            </div>
+        </section>
+
+        <!-- =========== PANTALLA 3: PANEL PRINCIPAL (oculta al inicio) =========== -->
+       <section id="main-panel-section" class="card hidden">
+    <h2 id="main-panel-title">Panel</h2>
+
+    <div id="admin-tools" class="admin-tools hidden">
+         <button id="open-sheet-button" class="sheet-button">Abrir Lista de Alumnos</button>
+         <button id="load-deudores-button" class="sheet-button">Cargar Mensajes de Deudores</button>
+    </div>
+
+    <div id="search-container" class="input-group">
+        <input type="text" id="dni-input" placeholder="Buscar Alumno por DNI...">
+        <button id="search-button">Buscar</button>
+    </div>
+    
+    <button id="logout-button" class="back-button">Cerrar Sesión</button>
+</section>
+        
+        <!-- =========== SECCIÓN DE RESULTADOS =========== -->
+        <section id="result-section"></section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
